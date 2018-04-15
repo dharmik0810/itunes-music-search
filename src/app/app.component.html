@@ -1,7 +1,7 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="container">
+  <h3>Welcome to {{title}}!</h3>
+  <div class="form-group">
+    <input type="search" class="form-control" placeholder="Enter your favorite iTunes music" #search>
+  </div>
+  <button class="btn btn-primary" (click)="doSearch(search.value)">Search</button>
 </div>
-

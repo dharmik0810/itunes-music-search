@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'iTunes music search app';
+  title = 'iTunes Music Search App';
+  doSearch(search: String){
+    console.log('Search value:',search);
+  }
 }
