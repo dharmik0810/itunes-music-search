@@ -1,3 +1,4 @@
+import { SearchService } from './search.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,8 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private itunes: SearchService){}
   title = 'iTunes Music Search App';
   doSearch(search: String){
-    console.log('Search value:',search);
+    this.itunes.search(search);
   }
 }
