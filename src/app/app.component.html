@@ -1,7 +1,29 @@
 <div class="container">
-  <h3>Welcome to {{title}}!</h3>
-  <div class="form-group">
-    <input type="search" class="form-control" placeholder="Enter your favorite iTunes music" #search>
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Welcome to {{title}}!</h3>
+    </div>
   </div>
-  <button class="btn btn-primary" (click)="doSearch(search.value)">Search</button>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <input type="search" class="form-control" placeholder="Enter your favorite iTunes music" #search>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <button class="btn btn-primary" (click)="doSearch(search.value)">Search</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let track of itunes.results">
+          <img src="{{track.artworkUrl30}}">
+          <a target="_blank" href="{{track.trackViewUrl}}">{{ track.trackName }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
